@@ -7,35 +7,25 @@ import { getDateFormated } from '../data';
 function MainDisplay({ weatherCityDays, metricSystem }: MainDisplayProps) {
     return (
         <div className="w-full bg-base-300 rounded-lg">
-            <div className="stat">
+            <div className='p-5'>
                 <div className="stat-title text-2xl">Current temperature</div>
-                {
-                    weatherCityDays ?
-                        <div className="stat-value text-7xl md:text-6xl flex items-center gap-10">
-                            {metricSystem ? `${weatherCityDays.current.temp_c} °C` : `${weatherCityDays.current.temp_f} °F`}
-                            <img className='h-32 md:h-20' src={weatherCityDays.current.condition.icon} alt={weatherCityDays.current.condition.text} />
-                        </div>
-                        :
-                        null
-                }
-                {
-                    weatherCityDays ?
-                        <div className="stat-desc text-2xl">{/* {weatherCityCurrentHour[0].IconPhrase} */}{weatherCityDays.current.condition.text}</div>
-                        :
-                        null
-                }
+                <div className="stat-value text-5xl flex flex-col xl:flex-row items-center gap-10">
+                    <p>{metricSystem ? `${weatherCityDays.current.temp_c} °C` : `${weatherCityDays.current.temp_f} °F`}</p>
+                    <img className='h-24' src={weatherCityDays.current.condition.icon} alt={weatherCityDays.current.condition.text} />
+                </div>
+                <div className="stat-desc text-2xl">{/* {weatherCityCurrentHour[0].IconPhrase} */}{weatherCityDays.current.condition.text}</div>
                 <div className="my-5 bg-current w-full h-1" />
 
                 <div className="stat-title text-2xl flex items-center gap-1">
                     <AiFillCalendar className="text-2xl" />
                     <p>{getDateFormated(weatherCityDays.location.localtime)}</p>
-                        
+
                 </div>
                 <div className="stat-title text-2xl flex items-center gap-1">
                     <HiLocationMarker className="text-2xl" />
                     {/* <p>{citySelected?.LocalizedName}, {citySelected?.AdministrativeArea.LocalizedName} {citySelected?.Country.LocalizedName}</p> */}
                     <div>
-                        <p>{weatherCityDays?.location.name}</p>
+                        <p className='font-bold text-4xl'>{weatherCityDays?.location.name}</p>
                         <p>{weatherCityDays?.location.region}</p>
                         <p>{weatherCityDays?.location.country}</p>
                     </div>

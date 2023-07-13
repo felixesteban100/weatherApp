@@ -74,7 +74,7 @@ function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeat
     return (
         <div className="flex flex-col md:flex-row gap-7 pb-5">
             {/* <div className="flex flex-col gap-2 md:max-h-[20vh]"> */}
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2">
                 <MainDisplay
                     // citySelected={citySelected}
                     weatherCityDays={weatherCityDays}
