@@ -4,7 +4,7 @@ import { DaysDisplayProps } from '../types'
 
 function DaysDisplay({ weatherCityDays, metricSystem, howManyDays, setDaySelected }: DaysDisplayProps) {
     return (
-        <div className="w-full bg-base-300 rounded-lg flex flex-col gap-3 overflow-y-scroll max-h-[52vh] pb-5">
+        <div className="w-full bg-base-300 rounded-lg flex flex-col gap-3 overflow-visible md:overflow-y-scroll max-h-none md:max-h-[52vh] pb-5">
             <p className="ml-5 mt-5 text-2xl font-bold">{howManyDays} Days forecast</p>
             {
                 weatherCityDays?.forecast.forecastday.map((currentDayWeather) => {

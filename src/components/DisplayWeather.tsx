@@ -88,7 +88,7 @@ function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeat
                 />
             </div>
 
-            <div className="w-full flex flex-col gap-5 overflow-y-scroll max-h-[90vh]">
+            <div className="w-full flex flex-col gap-5 overflow-visible md:overflow-y-scroll max-h-none md:max-h-[90vh]">
                 {/* <div className="w-full flex flex-col gap-5 "> */}
                 <Features
                     weatherCityDays={weatherCityDays}
