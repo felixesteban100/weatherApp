@@ -9,13 +9,16 @@ function ModalSelectedDay({ daySelected, metricSystem, country, city, region }: 
             <input type="checkbox" id={`my_modal_daySelected`} className="modal-toggle" value="" />
             <label htmlFor={`my_modal_daySelected`} className="modal">
                 <label htmlFor="">
-                    <div className="flex flex-col gap-5 rounded-md bg-base-100 h-[95vh] w-[80vw] max-w-[80rem] overflow-y-auto overflow-x-hidden py-5">
-                        <h3 className="text-xl md:text-4xl font-bold text-center mx-auto my-2 text-primary">{`${city}, ${region}, ${country}`}</h3>
-                        <h3 className="text-xl md:text-4xl font-bold text-center mx-auto my-2 text-primary">{getDateFormated(daySelected.date)}</h3>
+                    <div className="flex flex-col gap-5 rounded-md bg-base-100 h-[95vh] w-[80vw] max-w-[80rem] overflow-y-auto overflow-x-hidden py-8">
+                        <div>
+                            <h3 className="text-md md:text-4xl font-bold text-center mx-auto text-primary">{`${city}`}</h3>
+                            <p className="text-md md:text-4xl font-bold text-center mx-auto text-primary">{region}, {country}</p>
+                            <h3 className="text-md md:text-4xl font-bold text-center mx-auto text-primary">{getDateFormated(daySelected.date)}</h3>
+                        </div>
 
                         <div className="w-[80%] mx-auto">
-                            <p className='text-md md:text-2xl font-bold text-center mb-5'>Details by hour</p>
-                            <div className="overflow-x-auto h-[50vh]">
+                            {/* <p className='text-md md:text-2xl font-bold text-center mb-5'>Details by hour</p> */}
+                            <div className="overflow-x-auto h-[50vh] mb-2">
                                 <table className="table rounded-lg bg-base-200 table-pin-rows table-pin-col">
                                     <thead>
                                         <tr className="text-md md:text-2xl bg-base-200">
@@ -54,8 +57,8 @@ function ModalSelectedDay({ daySelected, metricSystem, country, city, region }: 
                                 </table>
                             </div>
 
-                            <p className='text-md md:text-2xl font-bold text-center mb-5'>Astro details</p>
-                            <div className="flex flex-col sm:flex-row md:flex-row xl:flex-row gap-5 md:gap-12 md:justify-center md:items-center  bg-base-200 p-5 rounded-lg mb-5 justify-center items-center">
+                            {/* <p className='text-md md:text-2xl font-bold text-center mb-5'>Astro details</p> */}
+                            <div className="flex flex-col sm:flex-row md:flex-row xl:flex-row gap-5 md:gap-12 md:justify-center md:items-center bg-base-200 p-5 rounded-lg justify-center items-center">
                                 <div className="flex flex-row gap-10">
                                     <div className="flex flex-col items-center gap-2">
                                         <BsFillSunFill className="text-xl md:text-2xl xl:text-5xl" />
