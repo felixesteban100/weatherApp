@@ -371,7 +371,9 @@ export type SearchProps = {
 export type ModalSelectedDayProps = {
   daySelected: DayForecast
   metricSystem: boolean;
-
+  country: string; 
+  city: string; 
+  region: string;
 }
 
 export type useWeathersIconsProps = {

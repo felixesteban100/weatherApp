@@ -12,8 +12,8 @@ function Navbar({ cityWritten, setCityWritten, isFetchingCityFeatures, errorCity
     return (
         <div className="grid grid-rows-1 grid-flow-col gap-4 justify-between items-center bg-base-100 pt-4 pb-4">
             <div className="flex items-center gap-2" >
-                <AiFillCloud className="text-5xl" />
-                <a className="normal-case text-xl font-bold">Weather App</a>
+                <AiFillCloud className="text-2xl md:text-5xl" />
+                <a className="normal-case text-md md:text-xl font-bold">Weather App</a>
             </div>
 
             <div className="col-span-2" >
@@ -31,16 +31,16 @@ function Navbar({ cityWritten, setCityWritten, isFetchingCityFeatures, errorCity
 
             <div className='flex gap-1'>
                 <label htmlFor="my_modal_search" className="btn btn-secondary flex md:hidden lg:hidden">
-                    <AiOutlineSearch className="text-2xl" />
+                    <AiOutlineSearch className="text-xl md:text-2xl" />
                 </label>
 
                 <label htmlFor="my_modal_settings" className="btn btn-secondary flex">
-                    <CiSettings className="text-2xl" />
+                    <CiSettings className="text-xl md:text-2xl" />
                     <p className='hidden lg:block'>Settings</p>
                 </label>
 
                 <button onClick={() => handleGetPosition()} className="btn btn-primary">
-                    <BiCurrentLocation className="text-2xl" />
+                    <BiCurrentLocation className="text-xl md:text-2xl" />
                     <p className='hidden lg:block'>Current Location</p>
                 </button>
 

@@ -12,9 +12,9 @@ function LoadingDisplayWeather() {
                 <div className="w-full bg-base-300 rounded-lg">
                     <div className="stat">
                         <div className="stat-title text-2xl">Current temperature</div>
-                        <div className="stat-value text-7xl md:text-6xl flex items-center gap-10">
-                            20 °C
-                            <AiFillCloud className='h-32 md:h-20' />
+                        <div className="stat-value text-5xl flex flex-col xl:flex-row items-center gap-10">
+                            20 °F
+                            <AiFillCloud className='h-24' />
                         </div>
 
                         <div className="stat-desc text-2xl">Thunderbols</div>
@@ -40,20 +40,24 @@ function LoadingDisplayWeather() {
                 <div className="w-full bg-base-300 rounded-lg flex flex-col gap-1 overflow-y-scroll max-h-[52vh]">
                     <p className="ml-5 mt-5 text-2xl font-bold">1 Days forecast</p>
 
-                    <div className="stat flex flex-col items-center gap-1 justify-between">
-                        <div className="stat-desc text-xl">20-20-2020</div>
-                        <div className="stat-title text-xl flex items-center gap-1 justify-between">
-                            {/* <BsFillCloudHazeFill className="text-2xl" /> */}
-                            <AiFillCloud className='h-32 md:h-20' />
+                    {["1b", "2b", "3b", "4b"].map((current) => {
+                        return (
+                            <div key={current} className="stat flex flex-col items-center gap-1 justify-between">
+                                <div className="stat-desc text-xl">20-20-2020</div>
+                                <div className="stat-title text-xl flex items-center gap-1 justify-between">
+                                    {/* <BsFillCloudHazeFill className="text-2xl" /> */}
+                                    <AiFillCloud className='h-32 md:h-20' />
 
-                            <div className='flex items-center gap-3'>
-                                <p>Max: 20 °C</p>
-                                <p>Min: 20 °C</p>
+                                    <div className='flex items-center gap-3'>
+                                        <p>Max: 20 °F</p>
+                                        <p>Min: 20 °F</p>
+                                    </div>
+
+                                </div>
+                                <div className='bg-current h-[1px] w-[80%] mt-1' />
                             </div>
-
-                        </div>
-                        <div className='bg-current h-[1px] w-[80%] mt-1' />
-                    </div>
+                        )
+                    })}
 
                 </div>
             </div>
@@ -142,33 +146,37 @@ function LoadingDisplayWeather() {
                                 <p className='text-2xl'>Feels like</p>
                                 <div className="flex items-center gap-5 justify-between">
                                     <LiaTemperatureLowSolid className="text-5xl" />
-                                    <p className='text-2xl'>20 °C</p>
+                                    <p className='text-2xl'>20 °F</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div className="w-full">
-
-
                     <p className="ml-5 mt-5 text-2xl font-bold">Today at</p>
 
-
                     <div className="overflow-x-scroll">
-                        <div className="grid grid-rows-1 grid-flow-col gap-5 pl-5 mt-2">
-                            <div  className="w-36 flex flex-col justify-center items-center bg-base-300 p-5 rounded-lg">
-                                <p>{new Date().getHours()}:00</p>
-                                <BsFillSunFill className="text-2xl" />
-                                <p>20 °C</p>
-                            </div>
-                        </div>
-
-
+                        {
+                            ["1a", "2a", "3a"].map((currentA) => {
+                                return (
+                                    <div key={currentA} className="grid grid-rows-1 grid-flow-col gap-5 pl-5 mt-2">
+                                        {
+                                            ["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((current) => {
+                                                return (
+                                                    <div key={current} className="w-36 flex flex-col justify-center items-center bg-base-300 p-5 rounded-lg">
+                                                        <p>{new Date().getHours()}:00</p>
+                                                        <BsFillSunFill className="text-2xl" />
+                                                        <p>20 °F</p>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-
                 </div>
             </div>
         </div>

@@ -104,6 +104,9 @@ function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeat
             {
                 daySelected !== undefined &&
                 <ModalSelectedDay
+                    country={weatherCityDays.location.country}
+                    region={weatherCityDays.location.region}
+                    city={weatherCityDays.location.name}
                     daySelected={daySelected}
                     metricSystem={metricSystem}
                 />
