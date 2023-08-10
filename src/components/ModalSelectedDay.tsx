@@ -44,7 +44,7 @@ function ModalSelectedDay({ daySelected, metricSystem, country, city, region }: 
                                                     <td>{metricSystem ? `${currentHour.feelslike_c} °C` : `${currentHour.feelslike_f} °F`}</td>
                                                     <td><img src={currentHour.condition.icon} alt={currentHour.condition.text} /></td>
                                                     <td>{currentHour.condition.text}</td>
-                                                    <td>{getAirQuality(currentHour.air_quality["us-epa-index"])}</td>
+                                                    {/* <td>{getAirQuality(currentHour.air_quality["us-epa-index"])}</td> I DON'T KNOW WHY THIS DOESN'T WORK :/ */}
                                                     <td>{currentHour.chance_of_rain}</td>
                                                     <td>{currentHour.chance_of_snow}</td>
                                                     <td>{currentHour.humidity}</td>
