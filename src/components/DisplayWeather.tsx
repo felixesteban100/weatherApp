@@ -20,6 +20,8 @@ import ModalSelectedDay from "./ModalSelectedDay"
 
 //da8cd7daef723af2886ff802133a80b7
 
+// I DON'T KNOW WHY BUT... NOW IT JUST DISPLAYS 3 DAYS MAXIMUM :→/
+
 function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeatherProps) {
 
     const [daySelected, setDaySelected] = useState<DayForecast>()
