@@ -15,12 +15,18 @@ import ModalSelectedDay from "./ModalSelectedDay"
 // use this video pattern and api to create the app
 
 //https://openweathermap.org/api
-
 //https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-
+//https://api.openweathermap.org/data/2.5/forecast?lat=42.466763&lon=-70.9494939&appid=da8cd7daef723af2886ff802133a80b7
 //da8cd7daef723af2886ff802133a80b7
 
-// I DON'T KNOW WHY BUT... NOW IT JUST DISPLAYS 3 DAYS MAXIMUM :→/
+/* those are different */
+
+//https://www.weatherapi.com/my/upgrade.aspx
+//http://api.weatherapi.com/v1/forecast.json?key=d6afa447d379417784d194539231007&q=42.466763,-70.9494939&days=10&aqi=yes&alerts=no
+//d6afa447d379417784d194539231007
+//943a583b4d24471b98d233628232408
+
+
 
 function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeatherProps) {
 
@@ -38,12 +44,12 @@ function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeat
             return axios
                 // .get<ApiWeatherResponse>(`https://api.openweathermap.org/data/3.0/onecall?lat=${citySelected?.lat}&lon=${citySelected?.lon}&appid=da8cd7daef723af2886ff802133a80b7`)
                 // .get<HourlyForecast>(`http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${citySelected?.Key}?apikey=4E3HQ37KVgWzYMVqK8RLTrdF02nAHZAC&metric=true`)
-                .get<WeatherData>(`http://api.weatherapi.com/v1/forecast.json?key=d6afa447d379417784d194539231007&q=${query}&days=${howManyDays}&aqi=yes&alerts=no`)
+                .get<WeatherData>(`http://api.weatherapi.com/v1/forecast.json?key=943a583b4d24471b98d233628232408&q=${query}&days=${howManyDays}&aqi=yes&alerts=no`)
                 .then((response) => response.data)
         }
     })
 
-    // console.log(daySelected)
+    console.log(weatherCityDays)
 
     useEffect(() => {
         refetchWeatherDays()
