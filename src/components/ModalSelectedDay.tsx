@@ -1,5 +1,5 @@
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import { /* getAirQuality, */ getDateFormated } from "../data";
+import { /* getAirQuality,  */getDateFormated } from "../data";
 import { ModalSelectedDayProps, OneHourForecast } from "../types"
 
 function ModalSelectedDay({ daySelected, metricSystem, country, city, region }: ModalSelectedDayProps) {
