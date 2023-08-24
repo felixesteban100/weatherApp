@@ -113,7 +113,7 @@ export const THEMES = [
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-export function getAirQuality(num: number) {
+export function getAirQuality(num: number | undefined) {
     switch (num) {
         case 1:
             return "Good"
