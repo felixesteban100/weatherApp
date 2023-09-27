@@ -27,15 +27,15 @@ function Features({ weatherCityDays, metricSystem }: FeaturesProps) {
               {/* <div className="grid grid-cols-2 xl:grid-cols-4 gap-5"> */}
               <div className="flex flex-col gap-1">
                 <p className="text-xl">
-                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.co.toFixed()} </span>
+                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.co} </span>
                   Carbon Monoxide (μg/m3)
                 </p>
                 <p className="text-xl">
-                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.o3.toFixed()} </span>
+                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.o3} </span>
                   Ozone (μg/m3)
                 </p>
                 <p className="text-xl">
-                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.no2.toFixed()} </span>
+                  <span className="font-bold text-2xl">{weatherCityDays?.current.air_quality.no2} </span>
                   Nitrogen dioxide (μg/m3)
                 </p>
               </div>

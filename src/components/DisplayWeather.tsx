@@ -49,7 +49,7 @@ function DisplayWeather({ citySelected, metricSystem, howManyDays }: DisplayWeat
         }
     })
 
-    console.log(weatherCityDays)
+    // console.log(weatherCityDays)
 
     useEffect(() => {
         refetchWeatherDays()
